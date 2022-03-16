@@ -13,7 +13,7 @@ public class Main {
 	
 	    Scanner sc = new Scanner(System.in);
 	    
-	    System.out.println("Entrez un Prénom");
+	    System.out.println("Entrez un Prï¿½nom");
 	    String firstName = sc.nextLine(); 
 	    
 	    System.out.println("entrez un mot de passe");
@@ -23,10 +23,10 @@ public class Main {
 	    
 
 	    if(inputPassword.equals(conseiller.getCons(firstName).getPassword())) {
-	    	System.out.println("auth réussi");
+	    	System.out.println("auth rï¿½ussi");
 	    	System.out.println("Bonjour" + " " + conseiller.getCons(firstName).getFirstName());
 	    } else {
-	    	System.out.println("auth échouée");
+	    	System.out.println("auth ï¿½chouï¿½e");
 	    }
 	    
 	    
