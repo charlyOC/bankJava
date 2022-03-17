@@ -2,26 +2,22 @@ package Templates;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
-import java.awt.Color;
-import javax.swing.JInternalFrame;
-import javax.swing.JToolBar;
-import javax.swing.JLayeredPane;
-import java.awt.FlowLayout;
-import java.awt.Component;
-import java.awt.CardLayout;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Cursor;
 
-public class TemplateListeClientsForm extends JFrame {
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Cursor;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+
+public class templateListeComptesForm extends JFrame {
 
 	private JPanel background;
 
@@ -32,7 +28,7 @@ public class TemplateListeClientsForm extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TemplateListeClientsForm frame = new TemplateListeClientsForm();
+					templateListeComptesForm frame = new templateListeComptesForm();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,8 +40,9 @@ public class TemplateListeClientsForm extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TemplateListeClientsForm() {
+	public templateListeComptesForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 800, 1000);
 		setBounds(100, 100, 800, 1000);
 		background = new JPanel();
 		background.setBackground(new Color(0, 0, 102));
@@ -59,14 +56,14 @@ public class TemplateListeClientsForm extends JFrame {
 		container.setBounds(91, 144, 615, 722);
 		background.add(container);
 		
-		JLabel lblTitle = new JLabel("Listes des clients");
+		JLabel lblTitle = new JLabel("Liste des comptes");
 		lblTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
 		lblTitle.setForeground(Color.CYAN);
 		lblTitle.setFont(new Font("SansSerif", Font.BOLD, 30));
 		lblTitle.setBounds(241, 56, 312, 36);
 		background.add(lblTitle);
 		
-		JButton btnValider = new JButton("valider");
+		JButton btnValider = new JButton("Valider");
 		btnValider.setAutoscrolls(true);
 		btnValider.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnValider.setForeground(Color.CYAN);
@@ -79,5 +76,6 @@ public class TemplateListeClientsForm extends JFrame {
 		btnValider.setBounds(313, 878, 200, 80);
 		background.add(btnValider);
 		
+	
 	}
 }
