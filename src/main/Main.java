@@ -1,11 +1,5 @@
 package main;
 
-import java.util.Scanner;
-
-import javax.swing.*;
-
-import client.AddClient;
-import client.Client;
 import conseiller.AddClientFromIdConseiller;
 import conseiller.AuthAndGetClients;
 
