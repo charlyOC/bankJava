@@ -19,7 +19,7 @@ public class GetConseiller {
 	}
 	
 	
-	public Conseiller getCons(String firstName) {
+	public Conseiller getConsFromFirstName(String firstName) {
 		Conseiller cons = null;
 		PreparedStatement ps;
 		try {

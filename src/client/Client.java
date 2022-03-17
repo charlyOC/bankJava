@@ -1,6 +1,7 @@
 package client;
 
 public class Client {
+
 	private int idClient;
 	private String nom;
 	private String prenom;
@@ -56,6 +57,8 @@ public class Client {
 		this.numClient = numClient;
 	}
 	
+
+
 	public int getIdConseiller() {
 		return idConseiller;
 	}
@@ -64,4 +67,3 @@ public class Client {
 	public void setIdConseiller(int idConseiller) {
 		this.idConseiller = idConseiller;
 	}
-}
