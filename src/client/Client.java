@@ -1,6 +1,9 @@
 package client;
 
+<<<<<<< HEAD
 public class Client {
+=======
+>>>>>>> 7aac15d17edae3336402c57588a66668fffa45cf
 
 	private int idClient;
 	private String nom;
@@ -58,7 +61,10 @@ public class Client {
 	}
 	
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7aac15d17edae3336402c57588a66668fffa45cf
 	public int getIdConseiller() {
 		return idConseiller;
 	}
@@ -67,3 +73,8 @@ public class Client {
 	public void setIdConseiller(int idConseiller) {
 		this.idConseiller = idConseiller;
 	}
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 7aac15d17edae3336402c57588a66668fffa45cf
