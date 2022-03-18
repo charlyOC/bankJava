@@ -2,8 +2,11 @@
 
 
 /main/
+<<<<<<< HEAD
 /src/
 /templates/
 /db/
 /client/
 /conseiller/
+=======
+>>>>>>> e7b0aed2d1c62c6bceeb57fb5704dd781e5c9b48

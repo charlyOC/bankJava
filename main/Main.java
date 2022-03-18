@@ -1,9 +1,5 @@
 package main;
 
-import java.util.Scanner;
-
-import client.AddClient;
-import client.Client;
 import conseiller.AddClientFromIdConseiller;
 import conseiller.AuthAndGetClients;
 
