@@ -13,7 +13,7 @@ public class DbConnection {
 	
 		try {
 			Class.forName("org.postgresql.Driver");
-		      connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/bank","postgres","SuperUser");
+		      connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Brief_Bank","postgres","ShineNorth");
 //		      System.out.println("query done");
 		} catch (ClassNotFoundException e) {
 			System.out.println(e);
