@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
-public class TemplateCreationBanqForm extends JFrame {
+public class TemplateLogin extends JFrame {
 
 //	private Image img_logo  = new ImageIcon(FrameLogin.class.getResource("img/bank.webp")).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
 //	private Image img_password  = new ImageIcon(FrameLogin.class.getResource("img/key.png")).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
@@ -36,7 +36,7 @@ public class TemplateCreationBanqForm extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TemplateCreationBanqForm frame = new TemplateCreationBanqForm();
+					TemplateLogin frame = new TemplateLogin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class TemplateCreationBanqForm extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TemplateCreationBanqForm() {
+	public TemplateLogin() {
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 800);
@@ -70,9 +70,6 @@ public class TemplateCreationBanqForm extends JFrame {
 		txtUsername.setAutoscrolls(false);
 		txtUsername.setText("Username");
 		txtUsername.setColumns(18);
-		
-		JLabel label = new JLabel("New label");
-		panel.add(label);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);
@@ -101,7 +98,7 @@ public class TemplateCreationBanqForm extends JFrame {
 		
 		JLabel lblIconLogin = new JLabel("");
 		lblIconLogin.setBounds(0, 0, 60, 40);
-		lblIconLogin.setIcon(new ImageIcon(TemplateCreationBanqForm.class.getResource("/img/key.png")));;
+		lblIconLogin.setIcon(new ImageIcon(TemplateLogin.class.getResource("/img/key.png")));;
 		pnlBtnLogin.add(lblIconLogin);
 		
 		lblX = new JLabel("X");
@@ -117,15 +114,15 @@ public class TemplateCreationBanqForm extends JFrame {
 		lblIconLogo.setIconTextGap(2);
 		lblIconLogo.setBounds(133, 17, 329, 196);
 		contentPane.add(lblIconLogo);
-		lblIconLogo.setIcon(new ImageIcon(TemplateCreationBanqForm.class.getResource("/img/banq.png")));
+		lblIconLogo.setIcon(new ImageIcon(TemplateLogin.class.getResource("/img/banq.png")));
 		
 		lblIconUsername = new JLabel("");
-		lblIconUsername.setIcon(new ImageIcon(TemplateCreationBanqForm.class.getResource("/img/user.png")));
+		lblIconUsername.setIcon(new ImageIcon(TemplateLogin.class.getResource("/img/user.png")));
 		lblIconUsername.setBounds(105, 371, 61, 60);
 		contentPane.add(lblIconUsername);
 		
 		lblIconPassword = new JLabel("");
-		lblIconPassword.setIcon(new ImageIcon(TemplateCreationBanqForm.class.getResource("/img/padlock.png")));
+		lblIconPassword.setIcon(new ImageIcon(TemplateLogin.class.getResource("/img/padlock.png")));
 		lblIconPassword.setBounds(105, 484, 61, 52);
 		contentPane.add(lblIconPassword);
 		

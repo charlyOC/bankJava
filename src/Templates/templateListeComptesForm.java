@@ -43,7 +43,6 @@ public class templateListeComptesForm extends JFrame {
 	public templateListeComptesForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 1000);
-		setBounds(100, 100, 800, 1000);
 		background = new JPanel();
 		background.setBackground(new Color(0, 0, 102));
 		background.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
