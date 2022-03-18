@@ -1,9 +1,8 @@
 package client;
 
-<<<<<<< HEAD
+
 public class Client {
-=======
->>>>>>> 7aac15d17edae3336402c57588a66668fffa45cf
+
 
 	private int idClient;
 	private String nom;
@@ -28,19 +27,19 @@ public class Client {
 		this.idClient = idClient;
 	}
 	
-	public String getNom() {
+	public String getNameClient() {
 		return nom;
 	}
 	
-	public void setNom(String nom) {
+	public void setNameClient(String nom) {
 		this.nom = nom;
 	}
 	
-	public String getPrenom() {
+	public String getFirstNameClient() {
 		return prenom;
 	}
 	
-	public void setPrenom(String prenom) {
+	public void setFirstNameClient(String prenom) {
 		this.prenom = prenom;
 	}
 	
@@ -61,10 +60,6 @@ public class Client {
 	}
 	
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7aac15d17edae3336402c57588a66668fffa45cf
 	public int getIdConseiller() {
 		return idConseiller;
 	}
@@ -73,8 +68,5 @@ public class Client {
 	public void setIdConseiller(int idConseiller) {
 		this.idConseiller = idConseiller;
 	}
-<<<<<<< HEAD
-=======
-
 }
->>>>>>> 7aac15d17edae3336402c57588a66668fffa45cf
+

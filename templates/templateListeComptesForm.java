@@ -1,4 +1,4 @@
-package Templates;
+package templates;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
