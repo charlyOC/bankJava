@@ -22,8 +22,6 @@ public class GetClient {
 		
 		ArrayList<Client> allClients = new ArrayList<Client>(); 
 		
-		
-		
 		PreparedStatement ps;
 		
 		try {
@@ -42,7 +40,7 @@ public class GetClient {
 				client.setNumClient(resultat.getString("numclient"));
 				client.setIdConseiller(resultat.getInt("idconseiller"));
 				allClients.add(client); 
- 
+				
 			}
 			
 		} catch (SQLException e) {
