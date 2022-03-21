@@ -1,7 +1,6 @@
 package client;
 
 import java.sql.Connection;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,33 +8,49 @@ import java.util.ArrayList;
 
 import db.DbConnection;
 
-public class Getclient {
-
+public class GetClient {
+	
 	private static Connection conn;
 	
-	public void GetClient() throws SQLException {
+	public GetClient() throws SQLException {
 		DbConnection.connect();
 		conn=DbConnection.getConnexion();// conn =  DriverManager.getConnection(url , userName, password);
-	
 	}
 	
-	public ArrayList<Client> getClientFromIdConseiller(int idConseiller){
+	
+	public ArrayList<Client> getClientFromIdConseiller(int idConseiller) {
 		
-		ArrayList<Client> AllClients = new ArrayList<Client>() ;
+		ArrayList<Client> allClients = new ArrayList<Client>(); 
 		
+		
+		
+		PreparedStatement ps;
 		
 		try {
+			ps = conn.prepareStatement("select * from client where idconseiller = ?");
+			ps.setInt(1, idConseiller);
 			
-			catch{
+			ResultSet resultat = ps.executeQuery();
+			
+			while (resultat.next()) {
 				
-			} finally {
-				
+				Client client = new Client(0, null, null, null, null, idConseiller);
+				client.setIdClient(resultat.getInt("idclient"));
+				client.setNameClient(resultat.getString("nom"));
+				client.setFirstNameClient(resultat.getString("prenom"));
+				client.setRaisonSociale(resultat.getString("raisonsociale"));
+				client.setNumClient(resultat.getString("numclient"));
+				client.setIdConseiller(resultat.getInt("idconseiller"));
+				allClients.add(client); 
+ 
 			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-		
-		return AllClients;
-		}
-		
-	}
+		return allClients;
+	
+}
 
+}
