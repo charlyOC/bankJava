@@ -17,7 +17,7 @@ public class AddClient {
 	}
 	
 
-	public void addClient(Client c, int idConseiller) {
+	public void addClient(Client c, int idConseiller ) {
 		try {
 			PreparedStatement ps = conn.prepareStatement("insert into client (idclient, nom, prenom, raisonsociale, numclient, idconseiller) values (?,?,?,?,?,?)");
 			ps.setInt(1, c.getIdClient());

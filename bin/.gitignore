@@ -1,12 +1,11 @@
 ./bin/
 
 
-/main/
-<<<<<<< HEAD
-/src/
-/templates/
-/db/
+/.metadata/
+/.project
+/.settings/
 /client/
 /conseiller/
-=======
->>>>>>> e7b0aed2d1c62c6bceeb57fb5704dd781e5c9b48
+/db/
+/main/
+/templates/
