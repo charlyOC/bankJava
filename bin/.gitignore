@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ./bin/
 
 
@@ -9,3 +10,7 @@
 /db/
 /main/
 /templates/
+=======
+/main/
+/conseiller/
+>>>>>>> 63d7eb2d300646df6f22fc5602be0e4e9fd03f9b
