@@ -6,7 +6,6 @@ import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.*;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -80,6 +79,13 @@ public class templateListeComptesForm extends JFrame {
 		background.add(navBackground);
 		
 		JButton btnOpenAccount = new JButton("Ouvrir un compte");
+		btnOpenAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				templateOuvrirCompteForm tocf = new templateOuvrirCompteForm();
+				tocf.show();
+				dispose();
+			}
+		});
 		btnOpenAccount.setVerticalAlignment(SwingConstants.BOTTOM);
 		btnOpenAccount.setForeground(new Color(0, 0, 102));
 		btnOpenAccount.setBorderPainted(false);
@@ -119,6 +125,8 @@ public class templateListeComptesForm extends JFrame {
 		navBackground.add(btnTransfertAccount);
 		
 		JButton btnOpenaccount = new JButton("Modifier un compte");
+		btnOpenaccount.setBackground(Color.CYAN);
+		btnOpenaccount.setBorder(null);
 		btnOpenaccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TemplateModifierForm tmf = new TemplateModifierForm();
@@ -132,6 +140,14 @@ public class templateListeComptesForm extends JFrame {
 		navBackground.add(btnOpenaccount);
 		
 		JButton btnCloseAccount = new JButton("Clôturer un compte");
+		btnCloseAccount.setBackground(Color.CYAN);
+		btnCloseAccount.setBorder(null);
+		btnCloseAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TemplateCloturerForm tcform = new TemplateCloturerForm();
+				tcform.show();
+				dispose();			}
+		});
 		btnCloseAccount.setForeground(new Color(0, 0, 102));
 		btnCloseAccount.setVerticalAlignment(SwingConstants.BOTTOM);
 		navBackground.add(btnCloseAccount);
