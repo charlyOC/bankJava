@@ -14,7 +14,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
 
-public class TemplateCloturer2Form extends JFrame {
+public class TransfertForm extends JFrame {
 
 	private JPanel background;
 
@@ -25,7 +25,7 @@ public class TemplateCloturer2Form extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TemplateCloturer2Form frame = new TemplateCloturer2Form();
+					TransfertForm frame = new TransfertForm();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,7 +37,7 @@ public class TemplateCloturer2Form extends JFrame {
 	
 	 //Create the frame.
 	 
-	public  TemplateCloturer2Form() {
+	public TransfertForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 900);
 		background = new JPanel();
@@ -47,7 +47,7 @@ public class TemplateCloturer2Form extends JFrame {
 		setContentPane(background);
 		
 		JPanel container = new JPanel();
-		container.setSize(615, 500);
+		container.setSize(615, 722);
 		container.setLocation(91, 144);
 		container.setForeground(new Color(0, 0, 139));
 		container.setBorder(new LineBorder(new Color(0, 0, 0), 0));
@@ -55,7 +55,7 @@ public class TemplateCloturer2Form extends JFrame {
 		background.add(container, BorderLayout.CENTER);
 		container.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Cloturer le compte");
+		JLabel lblNewLabel = new JLabel("Transferts");
 		lblNewLabel.setForeground(new Color(0, 255, 255));
 		lblNewLabel.setBounds(241, 56, 312, 36);
 		background.add(lblNewLabel);
@@ -67,25 +67,6 @@ public class TemplateCloturer2Form extends JFrame {
 		btnValider.setFont(new Font("SansSerif", Font.BOLD, 30));
 		btnValider.setBounds(313, 878, 200, 80);
 		background.add(btnValider);
-		
-		JButton btnNewButton = new JButton("OUI");
-		btnNewButton.setBackground(new Color(30, 144, 255));
-		btnNewButton.setForeground(Color.CYAN);
-		btnNewButton.setFont(new Font("SansSerif", Font.BOLD, 30));
-		btnNewButton.setBounds(150, 763, 123, 36);
-		background.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("NON");
-		btnNewButton_1.setForeground(new Color(0, 255, 255));
-		btnNewButton_1.setFont(new Font("SansSerif", Font.BOLD, 30));
-		btnNewButton_1.setBounds(564, 771, 116, 36);
-		background.add(btnNewButton_1);
-		
-		JLabel lblNewLabel_1 = new JLabel("Etes vous sur de cl\u00F4turer le compte ?");
-		lblNewLabel_1.setFont(new Font("SansSerif", Font.BOLD, 28));
-		lblNewLabel_1.setForeground(new Color(0, 255, 255));
-		lblNewLabel_1.setBounds(169, 684, 511, 24);
-		background.add(lblNewLabel_1);
 		
 	}
 }
