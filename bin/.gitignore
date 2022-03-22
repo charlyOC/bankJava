@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 ./bin/
 
 
-/.metadata/
-/.project
-/.settings/
-/client/
-/conseiller/
-/db/
-/main/
 /templates/
-=======
-/main/
+/src/
 /conseiller/
->>>>>>> 63d7eb2d300646df6f22fc5602be0e4e9fd03f9b

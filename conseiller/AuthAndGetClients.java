@@ -23,7 +23,7 @@ public class AuthAndGetClients {
 		
 	    GetConseiller conseiller = new GetConseiller(); 
 	    
-	    Getclient client = new Getclient();
+	    GetClient client = new GetClient();
  
 	    
 	    int idConseiller = conseiller.getConsFromFirstName(firstName).getIdConseiller(); 
