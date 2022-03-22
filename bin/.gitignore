@@ -1,6 +1,5 @@
+
 ./bin/
-
-
 /.metadata/
 /.project
 /.settings/
@@ -9,3 +8,5 @@
 /db/
 /main/
 /templates/
+/Templates/
+
