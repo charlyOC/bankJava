@@ -3,15 +3,26 @@ package Templates;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
+
+import client.AddClient;
+import conseiller.AddClientFromIdConseiller;
+import conseiller.Auth;
+import conseiller.Conseiller;
+import conseiller.GetConseiller;
 
 public class TemplateLogin extends JFrame {
 
@@ -28,27 +39,22 @@ public class TemplateLogin extends JFrame {
 	private JLabel lblIconLogo;
 	private JLabel lblIconUsername;
 	private JLabel lblIconPassword;
+	
+	
+	Auth auth = new Auth(); 
+	GetConseiller conseiller = new GetConseiller(); 
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TemplateLogin frame = new TemplateLogin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
+	
 
 	/**
 	 * Create the frame.
+	 * @throws SQLException 
 	 */
-	public TemplateLogin() {
+	@SuppressWarnings("deprecation")
+	public TemplateLogin() throws SQLException {
+		
+		
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 800);
@@ -71,6 +77,7 @@ public class TemplateLogin extends JFrame {
 		txtUsername.setText("Username");
 		txtUsername.setColumns(18);
 		
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(178, 484, 250, 40);
@@ -82,12 +89,38 @@ public class TemplateLogin extends JFrame {
 		txtPassword.setText("Password");
 		txtPassword.setBounds(6, 6, 225, 28);
 		panel_1.add(txtPassword);
+
+
 		
-		pnlBtnLogin = new JPanel();
+		JButton pnlBtnLogin = new JButton();
 		pnlBtnLogin.setBackground(new Color(0, 255, 255));
 		pnlBtnLogin.setBounds(171, 583, 257, 40);
 		contentPane.add(pnlBtnLogin);
 		pnlBtnLogin.setLayout(null);
+		pnlBtnLogin.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				
+				String username = txtUsername.getText(); 
+				String password = String.valueOf(txtPassword.getPassword()); 
+				try {
+					if(auth.checkAuthBool(username, password) == true) {
+						JOptionPane.showMessageDialog(contentPane, auth.checkAuthMessage(username, password));
+//					    TemplateClientsForm tcf = new TemplateClientsForm();
+//					    tcf.show();
+					    dispose();
+					}else {
+						JOptionPane.showMessageDialog(contentPane, auth.checkAuthMessage(username, password)); 
+					}
+
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} 
+
+			}
+		});
+		
 		
 		JLabel lblNewLabel = new JLabel("Login");
 		lblNewLabel.setForeground(new Color(255, 255, 255));

@@ -19,7 +19,7 @@ public class GetConseiller {
 	}
 	
 	
-	public Conseiller getConsFromFirstName(String firstName) {
+	public Conseiller getConsFromFirstName(String firstName) throws SQLException {
 		Conseiller cons = null;
 		PreparedStatement ps;
 		try {
