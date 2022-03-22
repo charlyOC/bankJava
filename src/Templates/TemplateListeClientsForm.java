@@ -69,8 +69,23 @@ public class TemplateListeClientsForm extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnValider.setBounds(313, 878, 200, 80);
+		btnValider.setBounds(517, 878, 200, 80);
 		background.add(btnValider);
+		
+		JButton btnNewClient = new JButton("créer nouveau client");
+		btnNewClient.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				templateCreationBankForm tcbf = new templateCreationBankForm();		
+				tcbf.show();
+				dispose();
+			}
+		});
+		btnNewClient.setForeground(Color.CYAN);
+		btnNewClient.setFont(new Font("SansSerif", Font.BOLD, 30));
+		btnNewClient.setBackground(Color.CYAN);
+		btnNewClient.setAutoscrolls(true);
+		btnNewClient.setBounds(26, 878, 349, 80);
+		background.add(btnNewClient);
 		
 	}
 }

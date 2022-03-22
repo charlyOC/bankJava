@@ -1,4 +1,4 @@
-package Templates;
+package JframeDemo;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -6,8 +6,12 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class ClientTest extends JFrame {
+public class Jframe1 extends JFrame {
 
 	private JPanel contentPane;
 
@@ -18,7 +22,7 @@ public class ClientTest extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ClientTest frame = new ClientTest();
+					Jframe1 frame = new Jframe1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,13 +34,27 @@ public class ClientTest extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ClientTest() {
+	public Jframe1() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.GREEN);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(83, 61, 167, 63);
+		contentPane.add(panel);
+		
+		JButton btnNewButton = new JButton("go to jframe 2");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Jframe2  jf2 = new Jframe2();
+				jf2.show();
+				dispose();
+			}
+		});
+		panel.add(btnNewButton);
 	}
-
 }

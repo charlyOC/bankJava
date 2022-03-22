@@ -1,22 +1,20 @@
 package Templates;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Cursor;
-import javax.swing.JLabel;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.*;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.border.LineBorder;
 
 public class templateListeComptesForm extends JFrame {
 
@@ -76,16 +74,16 @@ public class templateListeComptesForm extends JFrame {
 		btnValider.setBounds(307, 886, 200, 80);
 		background.add(btnValider);
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.CYAN);
-		panel.setBounds(0, 0, 794, 68);
-		background.add(panel);
+		JPanel navBackground = new JPanel();
+		navBackground.setBackground(Color.CYAN);
+		navBackground.setBounds(0, 0, 794, 68);
+		background.add(navBackground);
 		
 		JButton btnOpenAccount = new JButton("Ouvrir un compte");
 		btnOpenAccount.setVerticalAlignment(SwingConstants.BOTTOM);
 		btnOpenAccount.setForeground(new Color(0, 0, 102));
 		btnOpenAccount.setBorderPainted(false);
-		panel.add(btnOpenAccount);
+		navBackground.add(btnOpenAccount);
 		
 		JButton btnCreditAccount = new JButton("Créditer un compte");
 		btnCreditAccount.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -93,9 +91,12 @@ public class templateListeComptesForm extends JFrame {
 		btnCreditAccount.setBorderPainted(false);
 		btnCreditAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				CreditForm cf = new CreditForm();
+				cf.show();
+				dispose();
 			}
 		});
-		panel.add(btnCreditAccount);
+		navBackground.add(btnCreditAccount);
 		
 		JButton btnDebitAccount = new JButton("Débiter un compte");
 		btnDebitAccount.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -103,25 +104,37 @@ public class templateListeComptesForm extends JFrame {
 		btnDebitAccount.setBorderPainted(false);
 		btnDebitAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				DebitForm df = new DebitForm();
+				df.show();
+				dispose();
+					
 			}
 		});
-		panel.add(btnDebitAccount);
+		navBackground.add(btnDebitAccount);
 		
-		JButton btnTransfertAccount = new JButton("Créditer un compte");
+		JButton btnTransfertAccount = new JButton("Transferts");
 		btnTransfertAccount.setForeground(new Color(0, 0, 102));
 		btnTransfertAccount.setBorderPainted(false);
-		panel.add(btnTransfertAccount);
+		navBackground.add(btnTransfertAccount);
 		
 		JButton btnOpenaccount = new JButton("Modifier un compte");
+		btnOpenaccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TemplateModifierForm tmf = new TemplateModifierForm();
+				tmf.show();
+				dispose();
+			}
+		});
 		btnOpenaccount.setForeground(new Color(0, 0, 102));
 		btnOpenaccount.setVerticalAlignment(SwingConstants.BOTTOM);
 		btnOpenAccount.setBorderPainted(false);
-		panel.add(btnOpenaccount);
+		navBackground.add(btnOpenaccount);
 		
 		JButton btnCloseAccount = new JButton("Clôturer un compte");
+		btnCloseAccount.setForeground(new Color(0, 0, 102));
 		btnCloseAccount.setVerticalAlignment(SwingConstants.BOTTOM);
-		btnCloseAccount.setBorderPainted(false);
-		panel.add(btnCloseAccount);
+		navBackground.add(btnCloseAccount);
 		
 	
 	}
