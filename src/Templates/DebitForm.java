@@ -18,9 +18,9 @@ public class DebitForm extends JFrame {
 
 	private JPanel background;
 
-	/**
-	 * Launch the application.
-	 */
+	
+	 //Launch the application.
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -34,12 +34,12 @@ public class DebitForm extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	 //Create the frame.
+	 
 	public DebitForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 1000);
+		setBounds(100, 100, 800, 900);
 		background = new JPanel();
 		background.setBackground(new Color(0, 0, 102));
 		background.setBorder (new LineBorder(new Color(0, 0, 0), 1, true));

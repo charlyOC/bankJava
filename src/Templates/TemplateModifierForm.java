@@ -11,14 +11,17 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JLabel;
+import javax.swing.AbstractAction;
+import java.awt.event.ActionEvent;
+import javax.swing.Action;
 
 public class TemplateModifierForm extends JFrame {
 
 	private JPanel background;
-
-	/**
-	 * Launch the application.
-	 */
+	
+	
+	 // Launch the application.
+	 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -32,9 +35,9 @@ public class TemplateModifierForm extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	 // Create the frame.
+	
 	public TemplateModifierForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 1000);
@@ -48,15 +51,8 @@ public class TemplateModifierForm extends JFrame {
 		container.setBackground(Color.CYAN);
 		background.add(container);
 		container.setBackground(new Color(204, 255, 255));
-		container.setBounds(91, 144, 615, 722);
+		container.setBounds(91, 144, 615, 522);
 		container.setLayout(null);
-		
-		JButton btnValider = new JButton("Valider");
-		btnValider.setForeground(Color.CYAN);
-		btnValider.setFont(new Font("SansSerif", Font.BOLD, 30));
-		btnValider.setBackground(Color.CYAN);
-		btnValider.setBounds(313, 878, 200, 80);
-		background.add(btnValider);
 		
 		JLabel lblNewLabel = new JLabel(" Modifier le compte ");
 		lblNewLabel.setForeground(Color.CYAN);
@@ -64,5 +60,27 @@ public class TemplateModifierForm extends JFrame {
 		lblNewLabel.setBounds(223, 72, 304, 29);
 		background.add(lblNewLabel);
 		
+		JButton btnValider = new JButton("Valider");
+		btnValider.setForeground(Color.CYAN);
+		btnValider.setFont(new Font("SansSerif", Font.BOLD, 30));
+		btnValider.setBounds(376, 677, 151, 47);
+		background.add(btnValider);
+		
 	}
-}
+	
+	}
+	
+	class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
+	}
+	
+
+
+
+
+     
