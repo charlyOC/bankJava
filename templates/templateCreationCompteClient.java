@@ -66,65 +66,65 @@ public class templateCreationCompteClient extends JFrame {
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Cr\u00E9ation d'un Compte Client");
-		lblNewLabel.setForeground(Color.CYAN);
+		lblNewLabel.setBounds(173, 20, 423, 75);
+		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 30));
 		lblNewLabel.setMaximumSize(new Dimension(200, 75));
 		lblNewLabel.setPreferredSize(new Dimension(200, 75));
-		lblNewLabel.setBounds(143, 20, 423, 75);
 		getContentPane().add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Valider");
-		btnNewButton.setFont(new Font("SansSerif", Font.BOLD, 28));
 		btnNewButton.setBounds(331, 761, 133, 56);
+		btnNewButton.setFont(new Font("SansSerif", Font.BOLD, 28));
 		getContentPane().add(btnNewButton);
 		
 
 		
 		JLabel name = new JLabel("Nom de Famille");
-		name.setFont(new Font("SansSerif", Font.BOLD, 26));
 		name.setBounds(269, 127, 202, 37);
+		name.setFont(new Font("SansSerif", Font.BOLD, 26));
 		getContentPane().add(name);
 		
 		JLabel firstName = new JLabel("Pr\u00E9nom");
+		firstName.setBounds(296, 252, 187, 37);
 		firstName.setVerticalAlignment(SwingConstants.BOTTOM);
 		firstName.setFont(new Font("SansSerif", Font.BOLD, 26));
-		firstName.setBounds(296, 252, 187, 37);
 		getContentPane().add(firstName);
 		
 		JLabel raisonSociale = new JLabel("Raison Sociale");
-		raisonSociale.setFont(new Font("SansSerif", Font.BOLD, 26));
 		raisonSociale.setBounds(281, 379, 202, 48);
+		raisonSociale.setFont(new Font("SansSerif", Font.BOLD, 26));
 		getContentPane().add(raisonSociale);
 		
 		JLabel numeroClient = new JLabel("Num\u00E9ro de client");
-		numeroClient.setFont(new Font("SansSerif", Font.BOLD, 26));
 		numeroClient.setBounds(416, 507, 248, 43);
+		numeroClient.setFont(new Font("SansSerif", Font.BOLD, 26));
 		getContentPane().add(numeroClient);
 		
 		JLabel referenceConseiller = new JLabel("R\u00E9f\u00E9rence Conseiller");
-		referenceConseiller.setFont(new Font("SansSerif", Font.BOLD, 26));
 		referenceConseiller.setBounds(269, 633, 278, 47);
+		referenceConseiller.setFont(new Font("SansSerif", Font.BOLD, 26));
 		getContentPane().add(referenceConseiller);
 		
 		textField_1 = new JTextField();
-		textField_1.setColumns(10);
 		textField_1.setBounds(130, 299, 491, 56);
+		textField_1.setColumns(10);
 		getContentPane().add(textField_1);
 		
 		textField_2 = new JTextField();
-		textField_2.setColumns(10);
 		textField_2.setBounds(130, 428, 491, 56);
+		textField_2.setColumns(10);
 		getContentPane().add(textField_2);
 		
 		textField_3 = new JTextField();
-		textField_3.setColumns(10);
 		textField_3.setBounds(437, 557, 178, 56);
+		textField_3.setColumns(10);
 		getContentPane().add(textField_3);
 		
 		textField_4 = new JTextField();
-		textField_4.setColumns(10);
 		textField_4.setBounds(143, 684, 491, 56);
+		textField_4.setColumns(10);
 		getContentPane().add(textField_4);
 		
 		textField_5 = new JTextField();
@@ -133,9 +133,15 @@ public class templateCreationCompteClient extends JFrame {
 		textField_5.setColumns(10);
 		
 		JLabel numeroClient_1 = new JLabel("Id Client");
-		numeroClient_1.setFont(new Font("SansSerif", Font.BOLD, 26));
 		numeroClient_1.setBounds(183, 507, 133, 43);
+		numeroClient_1.setFont(new Font("SansSerif", Font.BOLD, 26));
 		getContentPane().add(numeroClient_1);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.CYAN);
+		panel.setForeground(Color.CYAN);
+		panel.setBounds(45, 30, 686, 721);
+		getContentPane().add(panel);
 
 		setBackground(Color.BLUE);
 		setBounds(100, 100, 798, 1000);
