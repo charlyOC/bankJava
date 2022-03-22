@@ -14,7 +14,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
 
-public class TemplateClouturer2Form extends JFrame {
+public class TemplateCloturer2Form extends JFrame {
 
 	private JPanel background;
 
@@ -25,7 +25,7 @@ public class TemplateClouturer2Form extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TemplateClouturer2Form frame = new TemplateClouturer2Form();
+					TemplateCloturer2Form frame = new TemplateCloturer2Form();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,7 +37,7 @@ public class TemplateClouturer2Form extends JFrame {
 	
 	 //Create the frame.
 	 
-	public  TemplateClouturer2Form() {
+	public  TemplateCloturer2Form() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 900);
 		background = new JPanel();
