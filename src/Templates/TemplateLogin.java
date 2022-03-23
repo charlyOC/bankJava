@@ -106,8 +106,8 @@ public class TemplateLogin extends JFrame {
 				try {
 					if(auth.checkAuthBool(username, password) == true) {
 						JOptionPane.showMessageDialog(contentPane, auth.checkAuthMessage(username, password));
-//					    TemplateClientsForm tcf = new TemplateClientsForm();
-//					    tcf.show();
+					    TemplateListeClientsForm tcf = new TemplateListeClientsForm();
+					    tcf.show();
 					    dispose();
 					}else {
 						JOptionPane.showMessageDialog(contentPane, auth.checkAuthMessage(username, password)); 
