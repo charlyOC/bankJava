@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import conseiller.AddClientFromIdConseiller;
 import conseiller.AuthAndGetClients;
+import templates.CreditForm;
 import templates.templateCreationCompteClient;
 
 
@@ -25,6 +26,19 @@ public class Main {
 			}
 		});
 	}
+	
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    CreditForm frame = new CreditForm();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 
 //	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub

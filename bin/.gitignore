@@ -1,6 +1,10 @@
 ./bin/
 
 
-/templates/
-/src/
+/client/
 /conseiller/
+/db/
+/main/
+/operation/
+/templates/
+/compte/
