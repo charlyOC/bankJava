@@ -120,6 +120,14 @@ public class templateListeComptesForm extends JFrame {
 		navBackground.add(btnDebitAccount);
 		
 		JButton btnTransfertAccount = new JButton("Transferts");
+		btnTransfertAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TransfertForm tff = new TransfertForm();
+				tff.show();
+				dispose();
+			}
+		});
+		btnTransfertAccount.setVerticalAlignment(SwingConstants.BOTTOM);
 		btnTransfertAccount.setForeground(new Color(0, 0, 102));
 		btnTransfertAccount.setBorderPainted(false);
 		navBackground.add(btnTransfertAccount);
@@ -129,8 +137,8 @@ public class templateListeComptesForm extends JFrame {
 		btnOpenaccount.setBorder(null);
 		btnOpenaccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TemplateModifierForm tmf = new TemplateModifierForm();
-				tmf.show();
+				TemplateModifierForm tmform = new TemplateModifierForm();
+				tmform.show();
 				dispose();
 			}
 		});
