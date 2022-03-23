@@ -9,7 +9,7 @@ public class Transferts {
 	private float montanttransfert;
 	private Date datetransfert;
 
-	private Transferts(int IdCompte, int IdCompte_1, float Montanttransfert, Date Datetransfert) {
+	Transferts(int IdCompte, int IdCompte_1, float Montanttransfert, Date Datetransfert) {
 		this.idCompte = IdCompte;
 		this.idCompte_1 = IdCompte_1;
 		this.montanttransfert = Montanttransfert;
