@@ -1,6 +1,7 @@
 package Templates;
 
 import java.awt.Color;
+
 import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.EventQueue;
@@ -14,7 +15,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+import org.postgresql.shaded.com.ongres.scram.client.ScramSession;
+
+import client.Client;
+import client.GetClient;
+import conseiller.GetCurrentConseiller;
+import client.GetCurrentClient;
+
 public class TemplateListeClientsForm extends JFrame {
+	
+	GetClient getClient = new GetClient();
+	GetCurrentConseiller session = new GetCurrentConseiller(); 
 
 	private JPanel background;
 
@@ -33,12 +44,28 @@ public class TemplateListeClientsForm extends JFrame {
 		container.setBounds(91, 144, 615, 722);
 		background.add(container);
 		
+
+		for(Client client : getClient.getClientFromIdConseiller(GetCurrentConseiller.getIdConseiller())) {
+			JButton clients = new JButton(client.getFirstNameClient() + " " + client.getNameClient()); 
+			container.add(clients);
+			clients.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GetCurrentClient.setIdClient(client.getIdClient()); 
+				    templateListeComptesForm tlcf = new templateListeComptesForm();
+				    tlcf.show();
+				    dispose();
+				}
+			});
+		}
+		
+		
 		JLabel lblTitle = new JLabel("Listes des clients");
 		lblTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
 		lblTitle.setForeground(Color.CYAN);
 		lblTitle.setFont(new Font("SansSerif", Font.BOLD, 30));
 		lblTitle.setBounds(241, 56, 312, 36);
 		background.add(lblTitle);
+		
 		
 		JButton btnValider = new JButton("valider");
 		btnValider.setAutoscrolls(true);

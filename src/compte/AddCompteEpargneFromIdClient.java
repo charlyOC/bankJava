@@ -38,7 +38,6 @@ public class AddCompteEpargneFromIdClient {
 	    compteEpargne.setPlafond(25000);
 	    
 	
-	    
 	    InsertQueryAccountEpargne request = new InsertQueryAccountEpargne(); 
 	    request.insertQueryAccountEpargne(compte, compteEpargne, idClient);
 	}

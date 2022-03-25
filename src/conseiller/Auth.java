@@ -13,6 +13,8 @@ public class Auth {
 	public String checkAuthMessage(String firstName, String inputPassword) throws SQLException{
 
 	    GetConseiller conseiller = new GetConseiller(); 
+	    
+	    
 	    String result; 
 	    
 	    
@@ -20,9 +22,9 @@ public class Auth {
 	    	System.out.println("couille du néant");
 	    	result = "Username incorrect"; 
 	    } else {
-	    	
 		    if(conseiller.getConsFromFirstName(firstName).getPassword().equals(inputPassword)){
-		    	result = "Authetification réussie"; 
+		    	result = "Authentification réussie"; 
+		    	GetCurrentConseiller.setIdConseiller(conseiller.getConsFromFirstName(firstName).getIdConseiller());
 		    } else {
 		    	result = "Mot de passe incorrect"; 
 		    }

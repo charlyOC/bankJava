@@ -12,8 +12,13 @@ public class GetClient {
 	
 	private static Connection conn;
 	
-	public GetClient() throws SQLException {
-		DbConnection.connect();
+	public GetClient() {
+		try {
+			DbConnection.connect();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		conn=DbConnection.getConnexion();// conn =  DriverManager.getConnection(url , userName, password);
 	}
 	
