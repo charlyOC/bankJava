@@ -58,6 +58,10 @@ public class TemplateListeClientsForm extends JFrame {
 			});
 		}
 		
+//		JButton btnAddClient = new JButton("Ajouter un client");
+//		btnAddClient.setForeground(Color.CYAN);
+//		
+//		background.add(btnAddClient); 
 		
 		JLabel lblTitle = new JLabel("Listes des clients");
 		lblTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -79,6 +83,17 @@ public class TemplateListeClientsForm extends JFrame {
 		});
 		btnValider.setBounds(313, 878, 200, 80);
 		background.add(btnValider);
+		
+		JButton btnNewButton = new JButton("Ajouter un client");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			    TemplateCreationCompteClient tcc = new TemplateCreationCompteClient();
+			    tcc.show();
+			    dispose();
+			}
+		});
+		btnNewButton.setBounds(586, 33, 152, 23);
+		background.add(btnNewButton);
 		
 	}
 }
